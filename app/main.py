@@ -28,3 +28,7 @@ def step(action: Action):
 @app.get("/tasks")
 def tasks():
     return get_tasks()
+
+@app.get("/")
+def home():
+    return {"message": "Email Triage OpenEnv is running"}

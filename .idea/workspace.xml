@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faa2e558-0966-439d-bfaa-6fcd8fd42852" name="Changes" comment="reset adn step working correctly">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="faa2e558-0966-439d-bfaa-6fcd8fd42852" name="Changes" comment="fixed docker file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774507723392</updated>
       <workItem from="1774507724419" duration="2526000" />
-      <workItem from="1774510912418" duration="986000" />
+      <workItem from="1774510912418" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="folder structure">
       <option name="closed" value="true" />
@@ -93,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774510155538</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed docker file">
+      <option name="closed" value="true" />
+      <created>1774512004454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774512004454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +106,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="folder structure" />
     <MESSAGE value="reset adn step working correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="reset adn step working correctly" />
+    <MESSAGE value="fixed docker file" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed docker file" />
   </component>
 </project>
