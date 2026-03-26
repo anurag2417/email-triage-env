@@ -1,0 +1,24 @@
+name: email-triage-env
+version: 1.0
+
+entrypoint: app.env:EmailEnv
+
+tasks:
+  - name: classification
+    difficulty: easy
+    description: Classify email as urgent, spam, or normal
+
+  - name: prioritization
+    difficulty: medium
+    description: Assign priority to emails
+
+  - name: reply_generation
+    difficulty: hard
+    description: Generate meaningful replies
+
+api:
+  endpoints:
+    - /reset
+    - /state
+    - /step
+    - /tasks
