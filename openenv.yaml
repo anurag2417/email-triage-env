@@ -1,24 +1,52 @@
-name: email-triage-env
-version: 1.0
+name: customer-support-triage-env
+version: 1.0.0
+description: |
+  Realistic customer support ticket triage and resolution environment.
+  Agent must process messy customer emails, query knowledge base,
+  issue refunds via simulated API, and draft professional replies.
 
-entrypoint: app.env:EmailEnv
+author: OpenEnv Contributor
+tags:
+  - customer-support
+  - natural-language
+  - business-process
+  - multi-step-reasoning
+
+observation_space:
+  type: structured
+  fields:
+    - ticket_id: string
+    - customer_email: string
+    - priority: string
+    - category_hint: string|null
+    - conversation_history: list[string]
+    - knowledge_base_results: list[dict]
+    - available_actions: list[string]
+
+action_space:
+  type: discrete+parameterized
+  actions:
+    - SEARCH_KB
+    - ISSUE_REFUND
+    - DRAFT_REPLY
+    - ESCALATE
+    - REQUEST_INFO
+
+reward_range: [-1.0, 1.0]
+max_episode_steps: 50
 
 tasks:
-  - name: classification
-    difficulty: easy
-    description: Classify email as urgent, spam, or normal
+  easy:
+    name: "Categorization & Simple Reply"
+    description: "Classify ticket type and draft a standard response"
+  medium:
+    name: "Refund Processing with Policy Check"
+    description: "Verify refund eligibility, process refund, and confirm"
+  hard:
+    name: "Complex Multi-Issue Resolution"
+    description: "Handle conflicting requests, policy exceptions, and customer escalation"
 
-  - name: prioritization
-    difficulty: medium
-    description: Assign priority to emails
-
-  - name: reply_generation
-    difficulty: hard
-    description: Generate meaningful replies
-
-api:
-  endpoints:
-    - /reset
-    - /state
-    - /step
-    - /tasks
+deployment:
+  docker_memory: 8GB
+  docker_cpus: 2
+  estimated_inference_time: 15min
