@@ -1,7 +1,7 @@
 import gradio as gr
 import requests
 
-BASE_URL = "http://127.0.0.1:7860"
+BASE_URL = "http://localhost:7860"
 
 current_email = {}
 
